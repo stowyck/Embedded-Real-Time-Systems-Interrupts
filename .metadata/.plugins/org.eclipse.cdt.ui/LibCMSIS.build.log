@@ -1,0 +1,6 @@
+14:48:43 **** Incremental Build of configuration Debug for project LibCMSIS ****
+make -r all 
+make: Nothing to be done for `all'.
+
+14:48:43 Build Finished (took 234ms)
+

@@ -1,0 +1,94 @@
+14:48:46 **** Incremental Build of configuration Debug for project Project ****
+make -r all 
+Building file: ../Source/Main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__NEWLIB__ -U__REDLIB__ -U__CODE_RED -I"O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include" -I"O:\versionNew1st\DFRobot_Interrupts_T1_S1\LibLPC17xx\Include" -I"O:\versionNew1st\DFRobot_Interrupts_T1_S1\LibCMSIS\Include" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -D__NEWLIB__ -MMD -MP -MF"Source/Main.d" -MT"Source/Main.o" -MT"Source/Main.d" -o"Source/Main.o" "../Source/Main.c"
+../Source/Main.c:102:28: warning: 'STATE' initialized and declared 'extern'
+  extern volatile song_type STATE = STOP;
+                            ^
+../Source/Main.c: In function 'SysTick_Handler':
+../Source/Main.c:251:20: warning: pointer targets in passing argument 1 of 'WriteOLEDString' differ in signedness [-Wpointer-sign]
+    WriteOLEDString(string, 3, 9);
+                    ^
+In file included from ../Source/Main.c:40:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/OLED.h:110:6: note: expected 'uint8_t *' but argument is of type 'char *'
+ void WriteOLEDString(uint8_t* String, uint8_t Line, uint8_t Position);
+      ^
+../Source/Main.c: In function 'main':
+../Source/Main.c:479:30: warning: passing argument 2 of 'floatToString' discards 'volatile' qualifier from pointer target type
+  floatToString(wheelDistance,string2,3);
+                              ^
+In file included from ../Source/Main.c:47:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/new_string.h:13:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void floatToString(float value, char* text_array, int array_size);
+      ^
+../Source/Main.c:480:18: warning: passing argument 1 of 'WriteOLEDString' discards 'volatile' qualifier from pointer target type
+  WriteOLEDString(string2, 4, 10);
+                  ^
+In file included from ../Source/Main.c:40:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/OLED.h:110:6: note: expected 'uint8_t *' but argument is of type 'volatile char *'
+ void WriteOLEDString(uint8_t* String, uint8_t Line, uint8_t Position);
+      ^
+../Source/Main.c: In function 'EINT3_IRQHandler':
+../Source/Main.c:571:34: warning: passing argument 2 of 'floatToString' discards 'volatile' qualifier from pointer target type
+      floatToString(wheelDistance,string2,3);
+                                  ^
+In file included from ../Source/Main.c:47:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/new_string.h:13:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void floatToString(float value, char* text_array, int array_size);
+      ^
+../Source/Main.c:572:22: warning: passing argument 1 of 'WriteOLEDString' discards 'volatile' qualifier from pointer target type
+      WriteOLEDString(string2, 4, 10);
+                      ^
+In file included from ../Source/Main.c:40:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/OLED.h:110:6: note: expected 'uint8_t *' but argument is of type 'volatile char *'
+ void WriteOLEDString(uint8_t* String, uint8_t Line, uint8_t Position);
+      ^
+../Source/Main.c:589:34: warning: passing argument 2 of 'floatToString' discards 'volatile' qualifier from pointer target type
+      floatToString(wheelDistance,string2,3);
+                                  ^
+In file included from ../Source/Main.c:47:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/new_string.h:13:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void floatToString(float value, char* text_array, int array_size);
+      ^
+../Source/Main.c:590:22: warning: passing argument 1 of 'WriteOLEDString' discards 'volatile' qualifier from pointer target type
+      WriteOLEDString(string2, 4, 10);
+                      ^
+In file included from ../Source/Main.c:40:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/OLED.h:110:6: note: expected 'uint8_t *' but argument is of type 'volatile char *'
+ void WriteOLEDString(uint8_t* String, uint8_t Line, uint8_t Position);
+      ^
+../Source/Main.c:799:32: warning: passing argument 2 of 'floatToString' discards 'volatile' qualifier from pointer target type
+    floatToString(wheelDistance,string2,3);
+                                ^
+In file included from ../Source/Main.c:47:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/new_string.h:13:6: note: expected 'char *' but argument is of type 'volatile char *'
+ void floatToString(float value, char* text_array, int array_size);
+      ^
+../Source/Main.c:800:20: warning: passing argument 1 of 'WriteOLEDString' discards 'volatile' qualifier from pointer target type
+    WriteOLEDString(string2, 4, 10);
+                    ^
+In file included from ../Source/Main.c:40:0:
+O:\versionNew1st\DFRobot_Interrupts_T1_S1\Project\Include/OLED.h:110:6: note: expected 'uint8_t *' but argument is of type 'volatile char *'
+ void WriteOLEDString(uint8_t* String, uint8_t Line, uint8_t Position);
+      ^
+../Source/Main.c: At top level:
+../Source/Main.c:369:13: warning: 'Init_ADC' defined but not used [-Wunused-function]
+ static void Init_ADC(void) //ANALOGUE to digital converter not initialised
+             ^
+Finished building: ../Source/Main.c
+ 
+Building target: Project.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"O:\versionNew1st\DFRobot_Interrupts_T1_S1\LibLPC17xx\Debug" -L"O:\versionNew1st\DFRobot_Interrupts_T1_S1\LibCMSIS\Debug" -Xlinker -Map="Project.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "Project_Debug.ld" -o"Project.axf"  ./Source/Buttons.o ./Source/Font5x7.o ./Source/Main.o ./Source/NoSystem.o ./Source/OLED.o ./Source/RotarySwitch.o ./Source/SevenSegment.o ./Source/Startup.o ./Source/Tune.o ./Source/dfrobot.o ./Source/joystick.o ./Source/new_string.o ./Source/pca9532.o   -lLibLPC17xx -lLibCMSIS
+Finished building target: Project.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "Project.axf"; # arm-none-eabi-objcopy -O binary "Project.axf" "Project.bin" ; checksum -p LPC1769 -d "Project.bin";
+   text	   data	    bss	    dec	    hex	filename
+  37864	   2564	    920	  41348	   a184	Project.axf
+ 
+
+14:48:48 Build Finished (took 1s.731ms)
+

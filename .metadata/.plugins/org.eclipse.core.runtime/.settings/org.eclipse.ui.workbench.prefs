@@ -1,0 +1,4 @@
+//org.eclipse.ui.commands/state/com.nxp.current.setProbeType/org.eclipse.ui.commands.radioState=nopower
+UIActivities.org.eclipse.cdt.debug.cdigdbActivity=true
+UIActivities.org.eclipse.cdt.debug.dsfgdbActivity=true
+eclipse.preferences.version=1
